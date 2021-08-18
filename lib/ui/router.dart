@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:topcode_assessment/ui/views/account_details_view.dart';
@@ -15,7 +16,10 @@ class Routers {
       case startUp:
         return MaterialPageRoute(builder: (_) => AccountView());
       case accountDetailsView:
-        return MaterialPageRoute(builder: (_) => AccountDetailsView());
+        return MaterialPageRoute(
+            builder: (_) => AccountDetailsView(
+                  accountDetails: null,
+                ));
       default:
         throw UnimplementedError();
     }
